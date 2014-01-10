@@ -30,3 +30,6 @@ build/StructuredLibraryTest: build/StructuredLibraryTest.o build/libModel.a buil
 
 build/ViewUnitTest: build/ViewUnitTest.o build/libModel.a build/libView.a
 	$(CC) build/ViewUnitTest.o -Lbuild -lModel -lView -o $@ $(CFLAGS)
+
+build/ControlUnitTest: build/ControlUnitTest.o build/libControl.a
+	$(CC) build/ControlUnitTest.o -Lbuild -lControl -o $@ $(CFLAGS)
